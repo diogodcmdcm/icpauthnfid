@@ -1,5 +1,9 @@
+import Principal "mo:base/Principal";
+
 actor {
-  public query func greet(name : Text) : async Text {
-    return "Hello, " # name # "!";
+   
+  public shared(msg) func getUserPrincipal() : async Text {
+    return "Principal_Id obtido no Backend: " # Principal.toText(msg.caller);
   };
+
 };
