@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "icpauthnfid_backend": {
+      "main": "src/icpauthnfid_backend/main.mo",
+      "type": "motoko"
+    },
+    "icpauthnfid_frontend": {
+      "dependencies": [
+        "icpauthnfid_backend"
+      ],
+      "source": [
+        "src/icpauthnfid_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "icpauthnfid_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
